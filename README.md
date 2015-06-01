@@ -1,2 +1,3 @@
 # heroku-flask-mongodb
-Simple Heroku/Flask/MongoDB example
+
+Simple Heroku/Flask/MongoDB example.

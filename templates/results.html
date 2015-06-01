@@ -1,0 +1,20 @@
+<HEAD>
+</HEAD>
+<BODY>
+  <form class="form-inline" action="/index" method="POST">
+    <div>
+      <label for="term">Message</label>
+      <input type="text" id="term" name="term" />
+    </div>
+    <button type="submit">Go</button>
+  </form>
+
+  <UL>
+    {% if items %}
+        {% for date, text in items %}
+            <LI>{{ date }} : <B>{{ text }}</B></LI>
+        {% endfor %}
+    {% endif %}
+
+  </UL>
+</BODY>
