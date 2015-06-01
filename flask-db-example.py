@@ -3,7 +3,7 @@ import mongoengine as db
 import datetime
 
 #import __passwd__
-class __passwd__: passwd = "xyzzy11"
+class __passwd__: passwd = "PASSWORD_HERE"
 
 dbname = "test1"
 user = "test1"
