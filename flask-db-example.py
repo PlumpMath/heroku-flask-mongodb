@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
 import mongoengine as db
 import datetime
+import os
 
 #import __passwd__
-class __passwd__: passwd = "PASSWORD_HERE"
+class __passwd__: passwd = os.environ["PASSWD"]
 
 dbname = "test1"
 user = "test1"
@@ -28,4 +29,5 @@ def do_search():
                            items=[(p.timestamp, p.content)
                                   for p in Message.objects.order_by("-timestamp")])
 
-#app.run(host='0.0.0.0', port=8080, debug=True)
+if os.environ["LOCAL"] == "yes":
+    app.run(host='0.0.0.0', port=8080, debug=True)
